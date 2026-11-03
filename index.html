@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a27">
+  <meta name="description" content="رسالة شخصية مكتوبة بهدوء وصدق.">
+  <title>في كلام جوايا ليكي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@300;400&family=IBM+Plex+Sans+Arabic:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="glow glow-one"></span><span class="glow glow-two"></span>
+    <span class="stars stars-one"></span><span class="stars stars-two"></span><span class="stars stars-three"></span>
+    <span class="glow glow-rose"></span>
+    <svg class="ambient-route" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <path d="M1660 820C1370 760 1440 610 1190 580S820 640 890 450 1110 270 850 210 420 310 360 105-10 65-80 180"/>
+      <circle cx="1190" cy="580" r="5"/><circle cx="890" cy="450" r="5"/><circle cx="850" cy="210" r="5"/><circle cx="360" cy="105" r="5"/>
+    </svg>
+    <svg class="botanical" viewBox="0 0 190 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23 229C63 190 65 147 94 112C117 84 139 65 160 22M61 166C39 162 25 147 20 127C42 129 57 141 61 166ZM89 119C67 113 57 97 57 77C78 82 91 96 89 119ZM119 84C119 62 132 47 151 40C153 61 142 78 119 84ZM49 190C70 186 85 193 96 209C76 216 59 209 49 190ZM99 107C104 88 96 70 80 59C72 79 79 97 99 107Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M137 57C127 46 127 31 136 19C147 28 150 42 137 57ZM113 91C103 78 105 64 115 53C126 64 127 78 113 91Z" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <main class="shell">
+    <div class="topline"><span aria-hidden="true"></span><span class="brand-mark" lang="en" dir="ltr">For Razan Shawket</span><span aria-hidden="true"></span></div>
+    <section id="welcome" class="screen active" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow" lang="en" dir="ltr">Message for you</p>
+        <h1 id="welcome-title" class="welcome-title">في كلام جوايا ليكي ...</h1>
+        <p class="welcome-subtitle">يمكن اتأخرت إني أقوله.</p>
+      </div>
+      <button class="button button-primary" data-action="start">Next <span aria-hidden="true">←</span></button>
+    </section>
+
+    <section id="letter" class="screen" aria-label="الرسالة">
+      <div class="letter-meta"><span lang="en" dir="ltr">Message for you</span><span id="progress-label"></span></div>
+      <svg class="journey-track" viewBox="0 0 1000 64" preserveAspectRatio="none" aria-hidden="true">
+        <path id="journey-route" d="M950 32 C900 3 850 61 800 32 S700 3 650 32 S550 61 500 32 S400 3 350 32 S250 61 200 32 S100 3 50 32"/>
+        <path id="journey-progress"/>
+        <g id="journey-stops"></g>
+        <circle id="journey-marker" r="8" cx="950" cy="32"/>
+      </svg>
+      <article class="letter-card" aria-live="polite"><p id="letter-text"></p></article>
+      <nav class="navigation" aria-label="التنقل بين فقرات الرسالة">
+        <button class="button button-quiet" data-action="back">Back</button>
+        <button class="button button-primary" data-action="next-letter">Next <span aria-hidden="true">←</span></button>
+      </nav>
+    </section>
+
+    <section id="question" class="screen" aria-labelledby="question-title">
+      <div class="center-copy">
+        <p class="eyebrow">بعد ما قريتي</p>
+        <h1 id="question-title">لو عندك كلام تقوليه ...</h1>
+      </div>
+      <svg class="journey-fork" viewBox="0 0 320 64" aria-hidden="true"><path d="M160 0V22C160 38 104 38 80 61M160 22C160 38 216 38 240 61"/><circle cx="80" cy="61" r="3"/><circle cx="240" cy="61" r="3"/></svg>
+      <div class="choice-row">
+        <button class="button choice-button" data-action="yes">YES</button>
+        <button class="button choice-button" data-action="no">NO</button>
+      </div>
+      <button class="button button-quiet back-centered" data-action="back">Back</button>
+    </section>
+
+    <section id="reply" class="screen" aria-labelledby="reply-title">
+      <div class="reply-heading"><p class="eyebrow">مساحة ليكي</p><h1 id="reply-title">قولي اللي حسااه ..</h1></div>
+      <form id="reply-form" novalidate>
+        <p class="reply-prompt">لو حابة الكلام يكون مباشر أنا مستنيكي كلميني</p>
+        <label class="visually-hidden" for="reply-message">قولي اللي حسااه .. لو حابة الكلام يكون مباشر أنا مستنيكي كلميني</label>
+        <textarea id="reply-message" name="message" rows="6" placeholder="اكتبي اللي حابة تقوليه ..."></textarea>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+        <div class="navigation"><button class="button button-quiet" type="button" data-action="back">Back</button><button id="send-button" class="button button-primary" type="submit">SEND <span aria-hidden="true">←</span></button></div>
+      </form>
+    </section>
+
+    <section id="no-response" class="screen" aria-label="الرد">
+      <div class="center-copy"><h1>شكرًا إنك كنتي صريحة ..</h1></div>
+      <button class="button button-quiet no-back" data-action="back">Back</button>
+    </section>
+
+    <section id="final" class="screen" aria-labelledby="final-title">
+      <div class="final-copy">
+        <p class="eyebrow">وصل كلامك</p>
+        <h1 id="final-title">وهنا تنتهي الرسالة...</h1>
+        <p>كان نفسي الكلام ده يوصلك من زمان، ويمكن مكنتش أعرف أقوله بالطريقة دي.</p>
+        <p>شكرًا إنك قريتي لحد هنا.</p>
+        <p>خلي بالك من نفسك.</p>
+        <p>كلامك وصلني لو حابه نكمل كلام انا مستنيكي في اي وقت...........</p>
+      </div>
+    </section>
+    <footer class="site-footer"><span>بكل هدوء وصدق</span></footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
